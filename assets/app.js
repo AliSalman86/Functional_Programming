@@ -87,7 +87,7 @@ var checkLimitsSimplified = function(upperLimit, lowerLimit) {
             }.bind(this, upperLimit, lowerLimit);
 };
 
-var outputArr4 = mapForEach(inputArr2, checkLimitsSimplified(100, 50));
+var outputArr4 = mapForEach(inputArr2, checkLimitsSimplified(100, 10));
 
 console.log(outputArr4);
 console.log('----------------------');
