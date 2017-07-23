@@ -62,12 +62,14 @@ console.log('----------------------')
 
 var inputArr2 = [12, 43, 67, 109, 3, 143, 90, 7];
 
+// function to check if the input element within the required upper and lower limits
 var checkLimits = function(upperLimit, lowerLimit, item) {
     if (item > lowerLimit && item < upperLimit) {
         return item;
     };
 };
 
+// using bind() method to pass parameters to the checkLimits function and to pass this one to the mapForEach function.
 var outputArr3 = mapForEach(inputArr2, checkLimits.bind(this, 50, 10));
 
 console.log(inputArr2);
