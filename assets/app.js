@@ -58,7 +58,7 @@ console.log(outputArr2);
 console.log('----------------------')
 
 
-// another example --- adding some more functions
+// ex3: another example --- adding some more functions
 
 var inputArr2 = [12, 43, 67, 109, 3, 143, 90, 7];
 
@@ -74,4 +74,20 @@ var outputArr3 = mapForEach(inputArr2, checkLimits.bind(this, 50, 10));
 
 console.log(inputArr2);
 console.log(outputArr3);
+console.log('----------------------');
+
+
+// ex4: simplifing the checkLimits function to accept only the upper and lower limits whithout need to call bind() every time.
+
+var checkLimitsSimplified = function(upperLimit, lowerLimit) {
+    return function(upperLimit, lowerLimit, item) {
+                if (item > lowerLimit && item < upperLimit) {
+                    return item;
+                };
+            }.bind(this, upperLimit, lowerLimit);
+};
+
+var outputArr4 = mapForEach(inputArr2, checkLimitsSimplified(100, 50));
+
+console.log(outputArr4);
 console.log('----------------------');
