@@ -23,7 +23,7 @@ function mapForEach(arr, fn) {
     var newArr = [];
     for (var i = 0; i < arr.length; i++) {
         var checkr = fn(arr[i]);
-        if (checkr) {
+        if (checkr) {   // if the function return a value that is not undefined then push it to the new array
             newArr.push(checkr);
         };
         // if we push the functoin output then in case of ex3, we will have undefined values in the resulted array, check by commenting above
