@@ -40,7 +40,7 @@ var hiding = hideTheWord(words, function(word) {
     var hiddenWord = [];
     // for loop to loop through all the letters of each word
     for (var i = 0; i < word.length; i++) {
-        console.log(word[i]);
+        // console.log(word[i]);
         // if there is a space, replace it with -
         if (word[i] === ' ') {
         hiddenWord.push('-');
@@ -54,5 +54,5 @@ var hiding = hideTheWord(words, function(word) {
 });
 
 // console log the results
-console.log(words[1]);
-console.log(hiding[1]);
+console.log(words)
+console.log(hiding);
